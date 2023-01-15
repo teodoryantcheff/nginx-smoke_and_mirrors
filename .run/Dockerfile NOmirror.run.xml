@@ -1,0 +1,31 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Dockerfile NOmirror" type="docker-deploy" factoryName="dockerfile" server-name="Local Windows docker">
+    <deployment type="dockerfile">
+      <settings>
+        <option name="containerName" value="nginx-NO-mirror" />
+        <option name="portBindings">
+          <list>
+            <DockerPortBindingImpl>
+              <option name="containerPort" value="80" />
+              <option name="hostPort" value="8811" />
+            </DockerPortBindingImpl>
+          </list>
+        </option>
+        <option name="sourceFilePath" value="Dockerfile" />
+        <option name="volumeBindings">
+          <list>
+            <DockerVolumeBindingImpl>
+              <option name="containerPath" value="/etc/nginx/conf.d/default.conf" />
+              <option name="hostPath" value="E:\src\uship-get-price\deleteme\nginx.nomirror.conf" />
+            </DockerVolumeBindingImpl>
+            <DockerVolumeBindingImpl>
+              <option name="containerPath" value="/home/forge/sgtautotransport.com/public/index.html" />
+              <option name="hostPath" value="E:\src\uship-get-price\deleteme\index.html" />
+            </DockerVolumeBindingImpl>
+          </list>
+        </option>
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>
